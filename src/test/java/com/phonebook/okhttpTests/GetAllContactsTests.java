@@ -5,6 +5,7 @@ import com.google.gson.JsonParser;
 import com.phonebook.core.TestBase;
 import com.phonebook.dto.AllContactDto;
 import com.phonebook.dto.ContactDto;
+import com.phonebook.dto.ErrorDto;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.testng.Assert;

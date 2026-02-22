@@ -53,9 +53,12 @@ public class LoginTests extends TestBase
                 .post(body)
                 .build();
 
+
+
         // assert status code
         Response response=client.newCall(request).execute();
         softAssert.assertEquals(response.code(),401);
+
 
         // assert status code message
         ErrorDto errorDto = gson.fromJson(response.body().string(), ErrorDto.class);
