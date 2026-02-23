@@ -24,8 +24,8 @@ public class GetAllContactsTests extends TestBase {
                 .addHeader(AUTH, TOKEN)
                 .build();
 
-        Response response = client.newCall(request).execute();
-        Assert.assertTrue(response.isSuccessful());
+        Response response = client.newCall(request).execute();// получает ответ
+        Assert.assertTrue(response.isSuccessful());// сравниваем ответ по aseert
 
         AllContactDto contactsDto = gson.fromJson(response.body().string(), AllContactDto.class);
         for (ContactDto contactDto : contactsDto.getContacts()) {
